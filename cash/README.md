@@ -1,5 +1,7 @@
 # cash
 
+Cash is a NodeJS library that allow to convert currency.
+
 ## Features
 
 Convert an amount of currency A into a currency B. Each currency must  be contained in the following available Currency list :
@@ -65,8 +67,9 @@ If you want to convert 10 Euros in US Dollar or Pound Sterling or Indian Rupee :
 node index.js 10 eur usd inr ```
 
 That will give you :
+
 <p >
-  <img src="../img/Result10eur.png" width="200"/>
+  <img src="../img/10eur.png" width="200"/>
 </p>
 
 ### Others commands
