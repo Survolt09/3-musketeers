@@ -8,6 +8,10 @@ const config = new Conf();
 
 updateNotifier({pkg}).notify();
 
+/**
+*@function version - Set the default currency to convert from and to.
+*/
+
 const saveCurrencies = argv => {
   config.set('defaultFrom', argv[1] || config.get('defaultFrom', 'USD'));
   config.set(
@@ -20,11 +24,17 @@ const saveCurrencies = argv => {
   process.exit(1);
 };
 
+/**
+*@function version - Display the version in the cli
+*/
 const version = () => {
   console.log(pkg.version);
   process.exit(1);
 };
 
+/**
+*@function help - Display some help on how to use the cash module.
+*/
 const help = () => {
   console.log(`
 Usage:
@@ -56,6 +66,11 @@ Examples:
   `);
   process.exit(1);
 };
+
+/**
+*@function helper - Parse the argv array to handle specifics commands (--version , --help , --save)
+*@param {array} argv - the arguments of the cli
+*/
 
 const helpers = argv => {
   // Version
